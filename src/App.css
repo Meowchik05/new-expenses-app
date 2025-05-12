@@ -1,0 +1,181 @@
+/* Основные стили приложения */
+.app-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  color: #fff;
+  background-color: #2d2d2d;
+  min-height: 100vh;
+}
+
+/* Стили списка задач */
+.task-list-container {
+  max-width: 800px;
+  margin: 20px auto 0;
+  padding: 20px;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+/* Стили элемента задачи */
+.task-item {
+  background-color: #3a3a3a;
+  color: #ffffff;
+  margin-bottom: 12px;
+  padding: 15px 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: all 0.3s ease;
+}
+
+.task-item.selected {
+  border-right: 4px solid #4CAF50;
+  background-color: #2d4a2d;
+}
+
+/* Заголовок задачи */
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.task-title {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.task-category {
+  background-color: #4a4a4a;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  color: #e0e0e0;
+}
+
+.task-amount {
+  font-size: 16px;
+  color: #f0f0f0;
+  margin: 8px 0;
+}
+
+/* Управление задачами */
+.task-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  justify-content: flex-end;
+}
+
+.delete-btn {
+  padding: 8px 16px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.delete-btn:hover {
+  background-color: #d32f2f;
+}
+
+/* Форма добавления */
+.add-task-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.add-task-input {
+  padding: 10px;
+  border: 1px solid #5d5d5d;
+  border-radius: 6px;
+  background-color: #3a3a3a;
+  color: #ffffff;
+}
+
+.add-task-button {
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Выбор категории */
+.category-select-container {
+  display: flex;
+  gap: 8px;
+}
+
+.category-select {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #5d5d5d;
+  border-radius: 6px;
+  background-color: #3a3a3a;
+  color: white;
+}
+
+.add-category-btn {
+  padding: 0 12px;
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.custom-category-container {
+  display: flex;
+  gap: 8px;
+}
+
+.confirm-category-btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0 12px;
+  cursor: pointer;
+}
+
+.cancel-category-btn {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0 12px;
+  cursor: pointer;
+}
+
+/* Ошибка ассистента */
+.assistant-error {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  padding: 10px 15px;
+  background-color: #f44336;
+  color: white;
+  border-radius: 4px;
+  z-index: 1000;
+  animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
